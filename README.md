@@ -45,7 +45,9 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 [![IMAGE ALT TEXT](/Images/Wireless%20With%20Arduino.png)](https://youtu.be/cRjwFIYLE_Y "Youtube Video")
 
 # Explanation
+
 ![ASK](/Images/2.jpg)
+
 ### Amplitude Shift Keying
 
 ASK
@@ -64,6 +66,7 @@ The ASK modulator block diagram comprises of the carrier signal generator, the b
 The carrier generator, sends a continuous high-frequency carrier. The binary sequence from the message signal makes the unipolar input to be either High or Low. The high signal closes the switch, allowing a carrier wave. Hence, the output will be the carrier signal at high input. When there is low input, the switch opens, allowing no voltage to appear. Hence, the output will be low.
 
 The band-limiting filter shapes the pulse depending upon the amplitude and phase characteristics of the band-limiting filter or the pulse-shaping filter.
+
 ![ASK Modulator](/Images/3.png)
 ### ASK Demodulator
 There are two types of ASK Demodulation techniques. They are −
@@ -79,7 +82,110 @@ The Asynchronous ASK detector consists of a half-wave rectifier, a low pass filt
 
 The modulated ASK signal is given to the half-wave rectifier, which delivers a positive half output. The low pass filter suppresses the higher frequencies and gives an envelope-detected output from which the comparator delivers a digital output.
 ![Asynchronous](/Images/4.jpg)
+
 ### Synchronous ASK Demodulator
 Synchronous ASK detector consists of a Square law detector, a low pass filter, a comparator, and a voltage limiter. Following is the block diagram for the same.
 The ASK-modulated input signal is given to the Square law detector. A square law detector is one whose output voltage is proportional to the square of the amplitude-modulated input voltage. The low pass filter minimizes the higher frequencies. The comparator and the voltage limiter help to get a clean digital output.
+
 ![Synchronous](/Images/5.png)
+
+# Wiring
+
+![Reciever](/Images/Reciever.png)
+
+## For the Receiver (Arduino Nano)
+On the I2C adapter
+Device----------> Nano
+VCC 5v
+GND GND
+SDA A4
+SCL A5
+On the RF chip (Reciever)
+VCC 5v or D12
+GND GND
+Data* D11
+On the switch
+Middle pin Gnd
+Other pin Power Supply-GND
+Other
+Power Supply+ VIN
+
+![Transimmeter](/Images/Sender.png)
+
+## On the RF chip (Transmitter)
+Device--------> Uno
+GND D8
+VCC D9
+DATA D10
+
+# CAD Design
+
+![Cad](/Images/Transmitter%20Enclosure%20v4.png)
+![Cad](/Images/Transmitter%20Enclosure%20v4.1.png)
+![Cad](/Images/Reciver%20Enclosure%20v5.png)
+
+I used Fusion 360 To make the Enclosure of the sender and receiver circuit then I sent the DXF files to a laser-cutting machine that made the Enclosure parts.
+The Part is made with wood of 3 mm in thickness.
+
+# Coding and Testing
+
+![Sender Algorithm](/Images/Reciver%20Algorithm.png)
+
+![Recieving Algorithm](/Images/Sender%20Algorithm.png)
+
+For Coding, first, you need to test the I2C and take the address
+you can make that by the following Code and uploading it on the Arduino Nano that connected to LCD
+
+'''
+#include <Wire.h>
+
+void setup()
+ {
+   Wire.begin();
+
+  Serial.begin(115200);
+   Serial.println("\nI2C Scanner");
+ }
+
+void loop()
+ {
+   byte error, address;
+   int nDevices;
+
+  Serial.println("Scanning...");
+
+  nDevices = 0;
+   for(address = 0; address <= 127; address++ )
+  {
+     // The i2c_scanner uses the return value of
+     // the Write.endTransmisstion to see if
+     // a device did acknowledge to the address.
+     Wire.beginTransmission(address);
+     error = Wire.endTransmission();
+
+    if (error == 0)
+     {
+       Serial.print("I2C device found at address 0x");
+       if (address<16)
+        Serial.print("0");
+       Serial.print(address,HEX);
+       Serial.println(" !");
+
+      nDevices++;
+     }
+     else if (error==4)
+    {
+       Serial.print("Unknow error at address 0x");
+       if (address<16)
+        Serial.print("0");
+       Serial.println(address,HEX);
+     }
+   }
+   if (nDevices == 0)
+     Serial.println("No I2C devices found\n");
+   else
+     Serial.println("done\n");
+
+  delay(8000);           // wait 8 seconds for next scan
+ }
+'''

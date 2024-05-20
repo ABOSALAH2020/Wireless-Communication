@@ -137,6 +137,7 @@ For Coding, first, you need to test the I2C and take the address
 you can make that by the following Code and uploading it on the Arduino Nano that connected to LCD
 
 '''C++
+
 #include <Wire.h>
 
 void setup()

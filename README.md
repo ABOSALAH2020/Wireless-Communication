@@ -35,3 +35,11 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 ### - 9V battery 
 ![Battery](/Images/61tHo16P1ZL._AC_UF894,1000_QL80_.jpg)
 ## Software components
+### - Arduino IDE
+### - Autodesk Fusion 360
+## Hand tools and fabrication machines
+### - Multitool, Screwdriver
+### - Laser cutter (generic)
+
+## You can see the full tutorial video before you read the Doc
+(https://youtu.be/cRjwFIYLE_Y)

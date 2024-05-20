@@ -42,4 +42,4 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 ### - Laser cutter (generic)
 
 ## You can see the full tutorial video before you read the Doc
-(https://youtu.be/cRjwFIYLE_Y)
+![Youtube Video](https://youtu.be/cRjwFIYLE_Y)

@@ -1,9 +1,10 @@
 # Wireless Communication Using Arduino (To do List)
-![A project photo](/Images/1673176765335.jpg)
+![A project photo](/Images/Wireless%20With%20Arduino.png)
 ### **Firstly let's talk about wireless transmission.**
 This is the era of wireless communication/technology. We can see the rise in the number of devices that are using Bluetooth and WiFi these days. With the IoT revolution in the electronics industry as well as the ever-increasing devices that needed internet connectivity we had to shift to IPv6 from IPv4.
 
 With these technological advances, we are forgetting about some simpler and older radio frequency devices and schemes. More and more people are publishing sophisticated projects which use IoT, Lora-WAN, and stuff even when it is not required in that project. A small project doesn't need such powerful wireless technology. It is a waste of resources.
+![A project photo](/Images/1673176765335.jpg)
 
 Now let's learn a bit about our RF Tx/Rx pair.
 
@@ -17,4 +18,12 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 
 # Things used in this project
 ## Hardware components
-### Arduino Uno ![Arduino Uno](/Images/arduino-uno-r3.png)
+### [ ] Arduino Uno ![Arduino Uno](/Images/arduino-uno-r3.png)
+### [ ] Arduino Nano ![Arduino Nano](/Images/Arduino-Nano-V3.0-CH340-Chip-Mini-USB-Cable.jpg)
+### [ ] RF Module(433MHZ) ![RF Module](/Images/RF%20Module%20433MHZ.png)
+### [ ] LCD 20x4 with I2C ![LCD](/Images/I2C.png)
+### [ ] BreadBoard ![BreadBoard](/Images/41nCh+ZtGxL._SL1004_.jpg)
+### [ ] Jumper wires ![Jumpers](/Images/1.jpg)
+### [ ] Rocker Switch ![Switch](/Images/Switch.jpg)
+### [ ] 9V battery ![Battery](/Images/61tHo16P1ZL._AC_UF894,1000_QL80_.jpg)
+## Software components

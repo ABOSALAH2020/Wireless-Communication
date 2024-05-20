@@ -135,16 +135,20 @@ The Part is made with wood of 3 mm in thickness.
 
 For Coding, first, you need to test the I2C and take the address
 you can make that by the following Code and uploading it on the Arduino Nano that connected to LCD.
-'I2C Testing'.
 
-'Sender Code'
+***'I2C Testing'***.
+
+***'Sender Code'***
+
 that code will make you able to know whether the I2C is Connected with LCD and the address
 then we need to upload the following code to the Arduino Uno, it's so simple you can understand it easily.
 
 Then upload Reciever code
-'Reciever code'.
 
-# Final 
+***'Reciever code'***.
+
+# Final
+ 
 ![Photo](/Images/1673176765283.jpg)
 
 ![Photo](/Images/1673176765309.jpg)

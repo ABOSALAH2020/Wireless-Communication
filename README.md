@@ -18,7 +18,7 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 
 # Things used in this project
 ## Hardware components
-### -[]. Arduino Uno 
+### - [ ]. Arduino Uno 
 ![Arduino Uno](/Images/arduino-uno-r3.png)
 ### [ ]. Arduino Nano 
 ![Arduino Nano](/Images/Arduino-Nano-V3.0-CH340-Chip-Mini-USB-Cable.jpg)

@@ -81,6 +81,7 @@ The clock frequency at the transmitter matches with the clock frequency at the r
 The Asynchronous ASK detector consists of a half-wave rectifier, a low pass filter, and a comparator. Following is the block diagram for the same.
 
 The modulated ASK signal is given to the half-wave rectifier, which delivers a positive half output. The low pass filter suppresses the higher frequencies and gives an envelope-detected output from which the comparator delivers a digital output.
+
 ![Asynchronous](/Images/4.jpg)
 
 ### Synchronous ASK Demodulator
@@ -148,7 +149,7 @@ Then upload Reciever code
 ***'Reciever code'***.
 
 # Final
- 
+
 ![Photo](/Images/1673176765283.jpg)
 
 ![Photo](/Images/1673176765309.jpg)

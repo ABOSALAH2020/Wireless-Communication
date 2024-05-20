@@ -119,7 +119,7 @@ VCC D9
 DATA D10
 
 # CAD Design
-
+![Cad](/Images/1.png)
 ![Cad](/Images/Transmitter%20Enclosure%20v4.png)
 ![Cad](/Images/Transmitter%20Enclosure%20v4.1.png)
 ![Cad](/Images/Reciver%20Enclosure%20v5.png)
@@ -134,59 +134,43 @@ The Part is made with wood of 3 mm in thickness.
 ![Recieving Algorithm](/Images/Sender%20Algorithm.png)
 
 For Coding, first, you need to test the I2C and take the address
-you can make that by the following Code and uploading it on the Arduino Nano that connected to LCD
+you can make that by the following Code and uploading it on the Arduino Nano that connected to LCD.
+'I2C Testing'.
 
-'''C++
+'Sender Code'
+that code will make you able to know whether the I2C is Connected with LCD and the address
+then we need to upload the following code to the Arduino Uno, it's so simple you can understand it easily.
 
-#include <Wire.h>
+Then upload Reciever code
+'Reciever code'.
 
-void setup()
- {
-   Wire.begin();
-  Serial.begin(115200);
-   Serial.println("\nI2C Scanner");
- }
+# Final 
+![Photo](/Images/1673176765283.jpg)
 
-void loop()
- {
-   byte error, address;
-   int nDevices;
-  Serial.println("Scanning...");
-  nDevices = 0;
+![Photo](/Images/1673176765309.jpg)
 
-   for(address = 0; address <= 127; address++ )
-  {
+![Photo](/Images/1673176765323.jpg)
 
-     Wire.beginTransmission(address);
-     error = Wire.endTransmission();
+![Photo](/Images/1673176765335.jpg)
 
-    if (error == 0)
-     {
-       Serial.print("I2C device found at address 0x");
-       if (address<16)
-        Serial.print("0");
-       Serial.print(address,HEX);
-       Serial.println(" !");
+![Photo](/Images/1673176765361.jpg)
 
-      nDevices++;
-     }
+![Photo](/Images/1673176765399.jpg)
 
-     else if (error==4)
-    {
-       Serial.print("Unknow error at address 0x");
-       if (address<16)
-        Serial.print("0");
-       Serial.println(address,HEX);
-     }
+![Photo](/Images/1673176765438.jpg)
 
-   }
+![Photo](/Images/1673176765450.jpg)
 
-   if (nDevices == 0)
-     Serial.println("No I2C devices found\n");
-   else
-     Serial.println("done\n");
-
-  delay(8000);    
-
- }
-'''
+## Command List (Case-sensitive)
+- status, shows status icon in top right corner (change the boolean constat to 0 to disable by default)
+- clear, will clear the screen
+- on, will turn on the transmitter
+- off, will turn off the transmitter
+- {, If you precede a command with this, it will display the command on the LCD
+- nostatus, hides status icon (default)
+- backlight, activates backlight (default)
+- nobacklight, deactivates backlight (to set as default comment out lcd.backlight() is setup)
+- 1, set line number to one
+- 2, set line number to two
+- 3, set line number to three
+- 4, set line number to four

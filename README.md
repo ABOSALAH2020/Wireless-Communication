@@ -42,4 +42,4 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 ### - Laser cutter (generic)
 
 ## You can see the full tutorial video before you read the Doc
-[![IMAGE ALT TEXT](/Images/Wireless%20With%20Arduino.png)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Youtube Video")
+[![IMAGE ALT TEXT](/Images/Wireless%20With%20Arduino.png)](https://youtu.be/cRjwFIYLE_Y "Youtube Video")

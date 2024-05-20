@@ -18,12 +18,20 @@ For example, If I want to send 1010, I will first switch on the carrier, this ca
 
 # Things used in this project
 ## Hardware components
-### [ ] Arduino Uno ![Arduino Uno](/Images/arduino-uno-r3.png)
-### [ ] Arduino Nano ![Arduino Nano](/Images/Arduino-Nano-V3.0-CH340-Chip-Mini-USB-Cable.jpg)
-### [ ] RF Module(433MHZ) ![RF Module](/Images/RF%20Module%20433MHZ.png)
-### [ ] LCD 20x4 with I2C ![LCD](/Images/I2C.png)
-### [ ] BreadBoard ![BreadBoard](/Images/41nCh+ZtGxL._SL1004_.jpg)
-### [ ] Jumper wires ![Jumpers](/Images/1.jpg)
-### [ ] Rocker Switch ![Switch](/Images/Switch.jpg)
-### [ ] 9V battery ![Battery](/Images/61tHo16P1ZL._AC_UF894,1000_QL80_.jpg)
+### [ ]. Arduino Uno 
+![Arduino Uno](/Images/arduino-uno-r3.png)
+### [ ]. Arduino Nano 
+![Arduino Nano](/Images/Arduino-Nano-V3.0-CH340-Chip-Mini-USB-Cable.jpg)
+### [ ]. RF Module(433MHZ) 
+![RF Module](/Images/RF%20Module%20433MHZ.png)
+### [ ]. LCD 20x4 with I2C 
+![LCD](/Images/I2C.png)
+### [ ]. BreadBoard 
+![BreadBoard](/Images/41nCh+ZtGxL._SL1004_.jpg)
+### [ ]. Jumper wires 
+![Jumpers](/Images/1.jpg)
+### [ ]. Rocker Switch 
+![Switch](/Images/Switch.jpg)
+### [ ]. 9V battery 
+![Battery](/Images/61tHo16P1ZL._AC_UF894,1000_QL80_.jpg)
 ## Software components

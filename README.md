@@ -127,6 +127,7 @@ DATA D10
 
 I used Fusion 360 To make the Enclosure of the sender and receiver circuit then I sent the DXF files to a laser-cutting machine that made the Enclosure parts.
 The Part is made with wood of 3 mm in thickness.
+You will find everything in the files.
 
 # Coding and Testing
 
